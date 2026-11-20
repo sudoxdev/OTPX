@@ -9,21 +9,13 @@
 Run the following commands in your Termux or Linux terminal:
 
 ```bash
-# 1. Update packages & install Git, Python and C/Crypto libraries
 pkg update && pkg upgrade -y
 pkg install -y git python python-cryptography libsodium
-
-# 2. Clone the repository
-git clone https://github.com/DEV-MITUL/OTPX.git
-
-# 3. Enter the project directory
+git clone https://github.com/sudoxdev/OTPX.git
 cd OTPX
-
-# 4. Upgrade pip & install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
-
-# 5. Set execution permission & Run
+unset LD_PRELOAD
 chmod +x otpx
 ./otpx
 ```
